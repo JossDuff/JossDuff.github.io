@@ -1,0 +1,40 @@
+body{background-color: #f7f4e9;}
+
+.myName{
+  text-align: center;
+  font-size:40px;
+  font-weight: bold;
+  margin-top: 100px;
+  margin-bottom:0px;
+}
+
+.links{
+  text-align: center;
+}
+
+.intro{
+  margin-top: 100px;
+  text-align: center;
+}
+
+.experienceTitle{
+  margin-top: 100px;
+  text-align: center;
+}
+
+.experienceBox{
+  margin-left: 400px;
+}
+
+.companyTitle{
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.jobDescription{
+  margin-bottom: 70px;
+}
+
+.jobRole{
+  font-style: italic;
+}
