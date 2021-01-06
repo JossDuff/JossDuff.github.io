@@ -17,13 +17,14 @@ body{background-color: #f7f4e9;}
   text-align: center;
 }
 
-.experienceTitle{
+.generalTitle{
   margin-top: 100px;
   text-align: center;
 }
 
-.experienceBox{
-  margin-left: 400px;
+.generalBox{
+  width: 700px;
+  margin: auto;
 }
 
 .companyTitle{
