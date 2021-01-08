@@ -8,22 +8,50 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
   </head>
   <body>
-    <h1 class="myName">Joss Duff</h1>
-    <p class="links">
-      <a href="https://github.com/JossDuff/">github</a>
-      <a href="https://www.linkedin.com/in/joss-duff-305670200/">linkedin</a>
-      <a href="resources/resume.pdf">resume</a>
-    </p>
-    <p class="intro">
-      Hi!  Welcome to my page.  It's currently under construction<br>
-      I'm a Sophomore at Lehigh University pursuing a B.S. in Computer Science and Business.
-    </p>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+          <img src="resources/dragon12.png" class="pull-right img-fluid" alt="dragon">
+        </div>
+        <div class="col">
+          <h1 class="myName">Joss Duff</h1>
+          <p class="links">
+            <a href="https://github.com/JossDuff/">
+              <img src="resources/github.png" alt="github" class="imglink">
+            </a>
+            <a href="https://www.linkedin.com/in/joss-duff-305670200/">
+              <img src="resources/linkedin.png" alt="linkedin" class="imglink">
+            </a>
+            <a href="resources/resume.pdf">
+              <img src="resources/resume.png" alt="resume" class="imglink">
+            </a>
+          </p>
+          <p class="intro">
+            Hi!  Welcome to my page.  It's currently under construction.<br>
+            I'm a Sophomore at Lehigh University pursuing a B.S. in Computer Science and Business.  You can reach me at jod323@lehigh.edu.
+          </p>
+        </div>
+        <div class="col">
+          <img src="resources/dragon4.png" class="img-fluid" alt="dragon">
+        </div>
+      </div>
+    </div>
+
     <div class="container-md">
 
       <h2 class="generalTitle">Experience</h2>
       <div class="container-fluid shadow-sm p-3 mb-5 bg-white rounded">
-        <p class="companyTitle">Lehigh University Nano Human Initiative</p>
-        <p class="jobRole">Software developer</p>
+        <div class="row">
+          <div class="col">
+            <p>Software Developer</p>
+          </div>
+          <div class="col">
+            <p>Lehigh University</p>
+          </div>
+          <div class="col">
+            <p class="text-right">January 2020 - September 2020</p>
+          </div>
+        </div>
         <ul class="jobDescription">
           <li>Small undergraduate team lead by Lehigh's Dr. Brian Chen to create a graphic user interface for remote control and viewing of electron microscopes</li>
           <li>Leader of a four person team this past summer assigned with the task of implementing a custom Python library developed by the manufacturer of Lehigh's electron microscope into our existing website</li>
