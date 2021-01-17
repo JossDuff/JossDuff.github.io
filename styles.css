@@ -12,10 +12,11 @@ div.vertical{
   text-align: center;
 }
 
+
 .profile-img{
-  margin-top: 10px;
+  margin-top: 20px;
   border-radius: 50%;
-  max-width: 65%;
+  max-width: 50%;
   height: auto;
 }
 
@@ -46,14 +47,13 @@ div.vertical{
 .imglink{
   margin-left: 10px;
   margin-right: 10px;
-  width:50px;
-  height:50px;
+  max-width:50px;
+  height:auto;
 }
 
 .myName{
   text-align: center;
   font-size:100px;
-  margin-top: 100px;
   margin-bottom:15px;
 }
 
