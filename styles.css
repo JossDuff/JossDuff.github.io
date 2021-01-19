@@ -51,6 +51,10 @@ div.vertical{
   height:auto;
 }
 
+.bold{
+  font-weight: bold;
+}
+
 .myName{
   text-align: center;
   font-size:100px;

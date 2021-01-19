@@ -2,4 +2,4 @@
 
 Personal website.  Currently under construction.
 
-Check it out at [jossduff.com](jossduff.github.io)
+Check it out at jossduff.com
