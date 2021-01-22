@@ -12,6 +12,13 @@ div.vertical{
   text-align: center;
 }
 
+div.center{
+  display: block;
+  text-align: center;
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
 
 .profile-img{
   margin-top: 20px;
