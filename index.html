@@ -38,9 +38,28 @@
 
     <div class="container-md">
 
-      <h2 class="generalTitle">JossToken</h2>
+      <h2 class="generalTitle">Token</h2>
       <div class="container-fluid p-3 mb-5 bg-white rounded">
         <script type="module" src="scripts/token.js"></script>
+        <div class="row shadow p-3">
+          <div class="col-lg-2 center">
+            <button onclick="myFunction()">Free JossToken</button>
+          </div>
+          <div class="col-lg-5 vertical">
+            <label for="name">Leave a message: (70 character limit)</label>
+            <input type="text" id="name" name="name" required minlength="1" maxlength="70" size="10">
+            <button onclick="myFunction()">Post message</button>
+          </div>
+          <div class="col-md">
+            <p class="noMargin bold"></p>
+            <ul class="noMargin">
+              <li><a href="https://rinkeby.etherscan.io/address/0x068964E433e3D35C68cbA901aF3eDd4776107CF1#code">
+                Contract on Etherscan</a></li>
+              <li>stuff ab jossToken</li>
+              <li>ok</li>
+            </ul>
+          </div>
+        </div>
       </div>
 
       <h2 class="generalTitle">Education</h2>
@@ -49,7 +68,7 @@
           <div class="col-lg-2 center">
             <img src="resources/LUcrest.png" alt="Lehigh University crest" class="icon">
           </div>
-          <div class="col-lg-5 vertical">
+          <div class="col-lg-3 vertical">
             <p class="role">Lehigh University</p>
             <p class="companyTitle">B.S. Computer Science and Business 2023</p>
           </div>

@@ -2,80 +2,75 @@ import { ethers } from "https://cdn.ethers.io/lib/ethers-5.2.esm.min.js";
 
 // A Web3Provider wraps a standard Web3 provider, which is
 // what Metamask injects as window.ethereum into each page
-const provider = new ethers.providers.Web3Provider(window.ethereum)
+const provider = new ethers.providers.Web3Provider(window.ethereum);
 
 // The Metamask plugin also allows signing transactions to
 // send ether and pay to change state within the blockchain.
 // For this, you need the account signer...
-const signer = provider.getSigner()
+const signer = provider.getSigner();
+
+// Get the string from the text input
+var message = document.getElementById("name");
 
 // Look up the current block number
-await provider.getBlockNumber()
+await provider.getBlockNumber();
 // 13098598
-
-// Get the balance of an account (by address or ENS name, if supported by network)
-balance = await provider.getBalance("ethers.eth")
-// { BigNumber: "2337132817842795605" }
-
-// Often you need to format the output to something more user-friendly,
-// such as in ether (instead of wei)
-ethers.utils.formatEther(balance)
-// '2.337132817842795605'
-
-// If a user enters a string in an input field, you may need
-// to convert it from ether (as a string) to wei (as a BigNumber)
-ethers.utils.parseEther("1.0")
-// { BigNumber: "1000000000000000000" }
-
-
-
 
 // You can also use an ENS name for the contract address
 const TokenAddress = "0x068964E433e3D35C68cbA901aF3eDd4776107CF1";
 
-// The ERC-20 Contract ABI, which is a common contract interface
-// for tokens (this is the Human-Readable ABI format)
-const readableTokenAbi = [
-  // Some details about the token
-  "function name() view returns (string)",
-  "function symbol() view returns (string)",
-
-  // Get the account balance
-  "function balanceOf(address) view returns (uint)",
-
-  // Send some of your tokens to someone else
-  "function transfer(address to, uint amount)",
-
-  // An event triggered whenever anyone transfers to someone else
-  "event Transfer(address indexed from, address indexed to, uint amount)"
-];
-
 const TokenAbi = [
   [{"inputs":[],"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"owner","type":"address"},{"indexed":true,"internalType":"address","name":"spender","type":"address"},{"indexed":false,"internalType":"uint256","name":"value","type":"uint256"}],"name":"Approval","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"address","name":"author","type":"address"},{"indexed":false,"internalType":"string","name":"text","type":"string"}],"name":"MakeMessage","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"from","type":"address"},{"indexed":true,"internalType":"address","name":"to","type":"address"},{"indexed":false,"internalType":"uint256","name":"value","type":"uint256"}],"name":"Transfer","type":"event"},{"inputs":[{"internalType":"address","name":"owner","type":"address"},{"internalType":"address","name":"spender","type":"address"}],"name":"allowance","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"spender","type":"address"},{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"approve","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"account","type":"address"}],"name":"balanceOf","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"decimals","outputs":[{"internalType":"uint8","name":"","type":"uint8"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"spender","type":"address"},{"internalType":"uint256","name":"subtractedValue","type":"uint256"}],"name":"decreaseAllowance","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"freeJoss","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"_messageIndex","type":"uint256"}],"name":"getMessages","outputs":[{"internalType":"address","name":"","type":"address"},{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"spender","type":"address"},{"internalType":"uint256","name":"addedValue","type":"uint256"}],"name":"increaseAllowance","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"string","name":"_newMessage","type":"string"}],"name":"makeMessage","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"","type":"uint256"}],"name":"messages","outputs":[{"internalType":"address","name":"author","type":"address"},{"internalType":"string","name":"text","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"name","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"symbol","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"totalSupply","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"recipient","type":"address"},{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"transfer","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"sender","type":"address"},{"internalType":"address","name":"recipient","type":"address"},{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"transferFrom","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"}]
-]
+];
 
-// The Contract object
-const TokenContract = new ethers.Contract(TokenAddress, TokenAbi, provider);
+// The Contract object.  Read and write allowed because passing signer
+const TokenContract = new ethers.Contract(TokenAddress, TokenAbi, signer);
 
+// read only method to get a single message from messages
+// https://docs.ethers.io/v5/api/contract/contract/#Contract-functionsCall
+// messageObj should be a Result object (essentially an array) with messageObj[1]
+// being author and messageObj[2] being the message.
+// Need to check if this function is even needed.  Might be able to delete it
+// from smart contract if calling the 'messages' array with an index returns the message
+var messageObj = await TokenContract.getMessages(0);
+
+// write message to give the caller 1 free jossToken
+// accourding to the docs, it should never return anything. If something needs
+// to be returned "it should be logged using a Solidity event (or EVM
+// log), which can then be queried from the transaction receipt."
+await TokenContract.freeJoss();
+
+// write message to create a message and put it on the Blockchain
+// has an argument that takes a string as the message.  Will also take the
+// caller's address and create a message object and add it to messages array on
+// chain.
+// Should make this emit an event "which can then be queried from the transaction
+// receipt" so I can update on front end.
+await makeMessage(message);
+
+
+//
+//  EXAMPLES
+//
 
 //
 // READ ONLY METHODS
 //
 
 // Get the ERC-20 token name
-await daiContract.name()
+await daiContract.name();
 // 'Dai Stablecoin'
 
 // Get the ERC-20 token symbol (for tickers and UIs)
-await daiContract.symbol()
+await daiContract.symbol();
 // 'DAI'
 
 // Get the balance of an address
-balance = await daiContract.balanceOf("ricmoo.firefly.eth")
+balance = await daiContract.balanceOf("ricmoo.firefly.eth");
 // { BigNumber: "14032899074838529727100" }
 
 // Format the DAI for displaying to the user
-ethers.utils.formatUnits(balance, 18)
+ethers.utils.formatUnits(balance, 18);
 // '14032.8990748385297271'
 
 
@@ -109,7 +104,7 @@ daiContract.on("Transfer", (from, to, amount, event) => {
 
 // A filter for when a specific address receives tokens
 myAddress = "0x8ba1f109551bD432803012645Ac136ddd64DBA72";
-filter = daiContract.filters.Transfer(null, myAddress)
+filter = daiContract.filters.Transfer(null, myAddress);
 // {
 //   address: 'dai.tokens.ethers.eth',
 //   topics: [
