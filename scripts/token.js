@@ -1,3 +1,6 @@
+// It is generally better practice (for security reasons) to copy the ethers
+// library to your own webserver and serve it yourself.  For quick demos or
+// prototyping though, it is okay to load it in Web Applications from the CDN.
 import { ethers } from "https://cdn.ethers.io/lib/ethers-5.2.esm.min.js";
 
 // A Web3Provider wraps a standard Web3 provider, which is
