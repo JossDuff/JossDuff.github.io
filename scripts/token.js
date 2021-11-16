@@ -55,8 +55,39 @@ await makeMessage(message);
 // Attempts to wire freeJoss button
 //
 
+// request access to the user's MetaMask account
+async function requestAccount() {
+  await window.ethereum.request({ method: 'eth_requestAccounts' });
+}
+
+// From https://dev.to/dabit3/the-complete-guide-to-full-stack-ethereum-development-3j13
+// This tutorial uses react so I might have to purge react stuff from here.
+// This just queries the blockchain so we don't need user account info.
+async function fetchMessage() {
+  if (typeof window.ethereum !== 'undefined') {
+    const provider = new ethers.providers.Web3Provider(window.ethereum)
+    console.log({ provider })
+    const contract = new ethers.Contract(TokenAddress, TokenAbi, provider)
+    try {
+      // Access the first index of the messages array.
+      // TODO: might need [0] instead.
+      const data = await contract.messages(0)
+      console.log('data: ', data)
+    } catch (err) {
+      console.log("Error: ", err)
+    }
+  }
+}
+
+//
+
+
+//
+// My attempts below
+//
+
 function init(){
-  
+
   // A Web3Provider wraps a standard Web3 provider, which is
   // what Metamask injects as window.ethereum into each page
   const provider = new ethers.providers.Web3Provider(window.ethereum);
