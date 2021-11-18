@@ -52,6 +52,25 @@ await TokenContract.freeJoss();
 await makeMessage(message);
 
 //
+// Attempts to wire connect Wallet button
+//
+
+async function connectWallet(){
+  const provider = new ethers.providers.Web3Provider(
+    window.ethereum,
+    "any"
+  );
+  await provider.send("eth_requestAccounts", []);
+  const signer = provider.getSigner();
+
+  (async function () {
+    let userAddress = await signer.getAddress();
+    document.getElementById("wallet").innerText =
+      "Your wallet is " + userAddress;
+  })();
+}
+
+//
 // Attempts to wire freeJoss button
 //
 
@@ -72,6 +91,7 @@ async function fetchMessage() {
       // Access the first index of the messages array.
       // TODO: might need [0] instead.
       const data = await contract.messages(0)
+      alert(data);
       console.log('data: ', data)
     } catch (err) {
       console.log("Error: ", err)

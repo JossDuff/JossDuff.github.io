@@ -139,6 +139,8 @@
               <button onclick="freeJossButton()" id="jossButton">Free JossToken</button>
             </div>
             <div class="col-lg vertical">
+              <button onClick="connectWallet()">Connect Wallet</button>
+              <div id="wallet"></div>
               <label for="name">Leave a message: (70 character limit)</label>
               <input type="text" id="name" name="name" required minlength="1" maxlength="70" size="10">
               <button onclick="myFunction()">Post message</button>
@@ -202,7 +204,7 @@
     </div>
 
     <div class="container-fluid center">
-      <button onclick="topFunction()" id="myBtn">Take me to the top</button>
+      <button onclick="topFunction()">Take me to the top</button>
     </div>
 
   </body>
