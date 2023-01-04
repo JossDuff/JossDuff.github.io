@@ -14,7 +14,7 @@
       src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
       type="application/javascript"
     ></script>
-    <script>
+    <!-- <script>
       const provider = new ethers.providers.Web3Provider(
         window.ethereum,
         "any"
@@ -27,7 +27,7 @@
         document.getElementById("wallet").innerText =
           "Your wallet is " + userAddress;
       })();
-    </script>
+    </script> -->
   </head>
   <body>
     <div class="container-fluid">
@@ -47,12 +47,13 @@
               <br>
               <a href="https://github.com/JossDuff/">github</a>
               <a href="https://www.linkedin.com/in/joss-duff-305670200/">linkedin</a>
-              <a href="resources/resume.pdf">resume</a>
+              <a href="resources/joss-duff-resume.pdf">resume</a>
+              <a href="https://twitter.com/Copernicrypto">twitter</a>
             </p>
         </div>
       </div>
     </div>
-<!--
+
     <div class="container-md">
 
       <h2 class="generalTitle">Education</h2>
@@ -63,13 +64,14 @@
           </div>
           <div class="col-lg-3 vertical">
             <p class="role">Lehigh University</p>
-            <p class="companyTitle">B.S. Computer Science and Business 2023</p>
+            <p class="companyTitle">B.S. in Computer Science, Computer Science and Business Honors Program 2023</p>
           </div>
           <div class="col-md">
             <p class="noMargin bold">Relevant Classes</p>
             <ul class="noMargin">
               <li>Blockchain Algorithms and Systems</li>
               <li>Blockchain Concepts and Applications</li>
+              <li>Blockchain Projects</li>
               <li>Database Systems and Applications</li>
               <li>Operating System Design</li>
               <li>Design and Analysis of Algorithms</li>
@@ -84,44 +86,51 @@
       <h2 class="generalTitle">Skills</h2>
       <div class="container-fluid p-3 mb-5 bg-white rounded">
         <div class="row shadow p-3">
+
           <p>
-            <img src="resources/bulb.webp" alt="">
             <img src="resources/solidity.svg" class="icon">
-            <img src="resources/ethers.png" class="ethersIcon">
-            <img src="resources/hardhat.png" class="icon">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-plain.svg" class="icon"/>
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" class="icon"/>
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="icon"/>
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg" class="icon"/>
+            <img src="resources/theGraph.png"" class="icon">
             <img src="resources/reach.svg" class="icon">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" class = "icon"/>
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" class = "icon"/>
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" class="icon"/>
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" class="icon"/>
+            <img src="resources/cpp.png" class = "icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="icon"/>
+            <img src="resources/rescript.png" class="icon">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg" class="icon"/>
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" class="icon"/>
+            <img src="resources/hardhat.png" class="icon">
+            <img src="resources/foundry.png" class="icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg" class="icon"/>
           </p>
-          <p class="italic">(Solidity, Ethers.js, Hardhat, Rust, C, JavaScript, Git, Reach, HTML, CSS, Python, Java, MySQL)</p>
+          <p class="italic">(Solidity, theGraph, Reach, C, C++, JavaScript, ReScript, Java, MySQL, Hardhat, Foundry, Git)</p>
         </div>
       </div>
 
-      <h2 class="generalTitle">Experience</h2>
+      <h2 class="generalTitle">Experience: Things I reported to a boss for</h2>
 
       <div class="container-fluid p-3 mb-5 bg-white rounded">
         <div class="row shadow p-3">
           <div class="col-lg-4 vertical">
-            <p class="role">Lead Blockchain Developer</p>
+            <p class="role">Smart Contract Developer</p>
             <p class="companyTitle"><a href="https://www.chainbytes.com/">ChainBytes</a></p>
-            <p class="date">January 2022 - Present</p>
+            <p class="date">January 2022 - December 2022</p>
+            <p>
+              <img src="resources/solidity.svg" class="icon">  
+              <img src="resources/theGraph.png"" class="icon">
+              <img src="resources/hardhat.png" class="icon">
+            </p>
           </div>
           <div class="col-md">
             <ul class="noMargin">
-              <li>Verifying fair payment of wages to coffee laborers in El Salvador on the bitcoin 
-                blockchain for my capstone project.</li>
-              <li>Team of 4 mentored by Eric Grill, Chainbytes CEO and blockchain advisor to the president of El Salvador.</li>
+              <li>
+                <a href="https://github.com/JossDuff/ChainBytes">Repository</a>
+                - Check out the beautiful readme :)
+              </li>
+              <li>Undergraduate capstone project mentored by Eric Grill, ChainBytes CEO and blockchain advisor to the President of El Salvador to verify fair
+                payment of wages to coffee laborers in El Salvador.</li>
+              <li>Designed, developed, tested, and deployed Solidity smart contract on an Ethereum Goerli testnet and a subgraph on theGraph network.</li>
+              <li>Maintained team’s Hardhat repo for smart contract and subgraph development.</li>
+              <li>WON best overall capstone project out of 30+ projects at Lehigh’s 2022 computer science capstone fair.</li>
               <li>Experienced a fluid and exploratory development environment that involved lots of problem solving.</li>
-              <li>Created bitcoin sidechain using <a href="https://elementsproject.org/">Elements</a> to hold data objects representing the state of coffee on the supply chain.</li>
-              <li>Using Lightning Network for payments to coffee laborers</li>
-              <li>Practiced scrum development with 1 week long sprints and weekly sprint reports documenting our progress.</li>
             </ul>
           </div>
         </div>
@@ -130,18 +139,22 @@
       <div class="container-fluid p-3 mb-5 bg-white rounded">
         <div class="row shadow p-3">
           <div class="col-lg-4 vertical">
-            <p class="role">Decentralized App Developer</p>
-            <p class="companyTitle"><a href="https://www.algorand.com/">Algorand</a></p>
-            <p class="date">January 2022 - Present</p>
+            <p class="role">Smart Contract Developer & Backend Developer Intern</p>
+            <p class="companyTitle"><a href="https://float.capital">Float Capital</a></p>
+            <p class="date">June 2022 - August 2022</p>
+            <p>
+              <img src="resources/solidity.svg" class="icon">  
+              <img src="resources/theGraph.png"" class="icon">
+              <img src="resources/foundry.png" class="icon">
+              <img src="resources/rescript.png" class="icon"> 
+            </p>
           </div>
           <div class="col-md">
             <ul class="noMargin">
-              <li>Taught myself how to use the Reach blockchain development platform to create a decentralized crowdfunding 
-                application on the Algorand blockchain.</li>
-              <li>Learned about development on the Algorand blockchain with the Algorand community and docs.</li>
-              <li>Had weekly 1-on-1 meetings with Algorand developer advocate, Russ Fustino.</li>
-              <li><a href="https://github.com/JossDuff/reach-crowdfund">
-                Github repo</a></li>
+              <li>Built a custom backend using GraphQL, Apollo, and ReScript to save emitted events and verify event data against data collected by subgraph.</li>
+              <li>Designed, wrote, and tested Solidity smart contract for Protocol Owned Liquidity dapp.</li>
+              <li>Developed and tested subgraph on theGraph network for Protocol Owned Liquidity smart contract.</li>
+              <li>Private repository that I no longer have access to.</li>
             </ul>
           </div>
         </div>
@@ -180,50 +193,38 @@
         </div>
       </div>
 
-
-      <h2 class="generalTitle">Organizations</h2>
-
+      <h2 class="generalTitle">Projects: Things I worked on outside of class</h2>
+     
       <div class="container-fluid p-3 mb-5 bg-white rounded">
         <div class="row shadow p-3">
           <div class="col-lg-4 vertical">
-            <p class="role">President</p>
-            <p class="companyTitle">Lehigh Cryptocurrency Club</p>
-            <p class="date">October 2021 - Present</p>
+            <p class="role">Decentralized App Developer</p>
+            <p class="companyTitle"><a href="https://www.algorand.com/">Algorand</a></p>
+            <p class="date">January 2022 - Present</p>
+            <p>
+              <img src="resources/reach.svg" class="icon">
+            </p>
           </div>
           <div class="col-md">
             <ul class="noMargin">
-              <li>Coordinated with Lehigh University to re-instate inactive club.</li>
-              <li>Led educational discussion with students about blockchain and cryptocurrency topics.</li>
-              <li>Organized and planned club meetings and events.</li>
-              <li>Recruited 100+ members.</li>
+              <li>
+                <a href="https://github.com/JossDuff/reach-crowdfund">Repository</a>
+              </li>
+              <li>
+                <a href="https://developer.algorand.org/tutorials/crowdfunding-dapp-with-reach/">Published tutorial on official Algorand Developer Portal</a>
+              </li>
+              <li>Taught myself how to use the Reach blockchain development platform to create a decentralized crowdfunding 
+                application on the Algorand blockchain.</li>
+              <li>Learned about development on the Algorand blockchain with the Algorand community and docs.</li>
+              <li>Had weekly 1-on-1 meetings with Algorand developer advocate, Russ Fustino.</li>
+              <li>Claimed a gitcoin bounty sponsored by Reach for publishing a tutorial in their language.</li>
             </ul>
           </div>
         </div>
       </div>
-
-      <div class="container-fluid p-3 mb-5 bg-white rounded">
-        <div class="row shadow p-3">
-          <div class="col-lg-4 vertical">
-            <p class="role">Member</p>
-            <p class="companyTitle"><a href="https://wordpress.lehigh.edu/sss/">Scalable Systems and Software 
-              Research Group, Lehigh University</a></p>
-            <p class="date">January 2021 - Present</p>
-          </div>
-          <div class="col-md">
-            <ul class="noMargin">
-              <li>Attended weekly presentations advanced blockchain topics.</li>
-              <li>Shared and discussed blockchain technology news with professors and graduate students<./li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-
-      <h2 class="generalTitle">Projects</h2>
 
       <div class="container-fluid p-3 mb-5 bg-white rounded shadow">
         <div class="row p-3">
-
           <div class="col-lg-4 vertical">
             <p class="role">Solidity Developer</p>
             <p class="companyTitle">JossToken</p>
@@ -292,11 +293,49 @@
         </div>
       </div>
 
+      <h2 class="generalTitle">Organizations</h2>
+
+      <div class="container-fluid p-3 mb-5 bg-white rounded">
+        <div class="row shadow p-3">
+          <div class="col-lg-4 vertical">
+            <p class="role">President</p>
+            <p class="companyTitle">Lehigh Cryptocurrency Club</p>
+            <p class="date">October 2021 - Present</p>
+          </div>
+          <div class="col-md">
+            <ul class="noMargin">
+              <li>Coordinated with Lehigh University to re-instate inactive club.</li>
+              <li>Led educational discussion with students about blockchain and cryptocurrency topics.</li>
+              <li>Organized and planned club meetings and events.</li>
+              <li>Recruited 100+ members.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid p-3 mb-5 bg-white rounded">
+        <div class="row shadow p-3">
+          <div class="col-lg-4 vertical">
+            <p class="role">Member</p>
+            <p class="companyTitle"><a href="https://wordpress.lehigh.edu/sss/">Scalable Systems and Software 
+              Research Group, Lehigh University</a></p>
+            <p class="date">January 2021 - Present</p>
+          </div>
+          <div class="col-md">
+            <ul class="noMargin">
+              <li>Attended weekly presentations advanced blockchain topics.</li>
+              <li>Shared and discussed blockchain technology news with professors and graduate students<./li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+
     </div>
 
     <div class="container-fluid center">
       <button onclick="topFunction()">Take me to the top</button>
     </div>
-  -->
   </body>
 </html>
