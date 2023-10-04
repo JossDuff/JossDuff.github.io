@@ -1,462 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="icon" href="resources/snorlax.png">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Joss Duff</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <script src="scripts/button.js"></script>
-    <script src="scripts/token.js"></script>
-    <script
-      src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
-      type="application/javascript"
-    ></script>
-    <!-- <script>
-      const provider = new ethers.providers.Web3Provider(
-        window.ethereum,
-        "any"
-      );
-      await provider.send("eth_requestAccounts", []);
-      const signer = provider.getSigner();
 
-      (async function () {
-        let userAddress = await signer.getAddress();
-        document.getElementById("wallet").innerText =
-          "Your wallet is " + userAddress;
-      })();
-    </script> -->
-  </head>
-  <body>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg">
-          <h1 class="myName">jossduff.com</h1>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-4"></div>
-        <div class="col-lg-4">
-            <p class="intro">
-              Hi!
-              <br><br>
-              I'm a Senior at
-              <a href="https://www1.lehigh.edu/">
-              Lehigh University</a> pursuing a
-              <a href="http://catalog.lehigh.edu/coursesprogramsandcurricula/interdisciplinaryundergraduatestudy/computerscienceandbusinessprogram/#text">
-              B.S. in Computer Science and Business</a>.  I love learning about anything relating to blockchain technology.  You can reach me at jod323@lehigh.edu.
-              <br>
-              <br>
-              <a href="https://github.com/JossDuff/">github</a>
-              <a href="https://www.linkedin.com/in/joss-duff-305670200/">linkedin</a>
-              <a href="resources/joss-duff-resume.pdf">resume</a>
-              <a href="https://twitter.com/Copernicrypto">twitter</a>
-            </p>
-        </div>
+<head>
+  <link rel="icon" href="resources/snorlax.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Joss Duff</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg">
+        <h1 class="myName">jossduff.com</h1>
       </div>
     </div>
+    <div class="row">
+      <div class="col-lg-4"></div>
+      <div class="col-lg-4">
+        <p class="intro">
+          Hi!
+          <br><br>
+          I graduated from
+          <a href="https://www1.lehigh.edu/">
+            Lehigh University</a> this May with a B.S. in
+          <a
+            href="http://catalog.lehigh.edu/coursesprogramsandcurricula/interdisciplinaryundergraduatestudy/computerscienceandbusinessprogram/#text">
+            Computer Science and Business</a>. I love learning about anything relating to blockchain technology.
+          You can reach me at jduff360@gmail.com.
+          <br>
+          <br>
+          Currently I'm doing a lot of reading and learning Rust :)
+          <br>
+          <br>
+          <a href="https://github.com/JossDuff/">github</a>
+          <a href="https://www.linkedin.com/in/joss-duff-305670200/">linkedin</a>
+          <a href="resources/joss-duff-resume.pdf">resume</a>
+          <a href="https://twitter.com/Copernicrypto">twitter</a>
 
-    <div class="container-md">
-
-      <h2 class="generalTitle">Education</h2>
-      <div class="container-fluid p-3 mb-5 bg-white rounded">
-        <div class="row shadow p-3">
-          <div class="col-lg-2 center">
-            <img src="resources/LUcrest.png" alt="Lehigh University crest" class="lehighcrest">
-          </div>
-          <div class="col-lg-3 vertical">
-            <p class="role">Lehigh University</p>
-            <p class="companyTitle">B.S. in Computer Science, Computer Science and Business Honors Program 2023</p>
-          </div>
-          <div class="col-md">
-            <p class="noMargin bold">Relevant Classes</p>
-            <ul class="noMargin">
-              <li>Blockchain Algorithms and Systems</li>
-              <li>Blockchain Concepts and Applications</li>
-              <li>Blockchain Projects</li>
-              <li>Database Systems and Applications</li>
-              <li>Operating System Design</li>
-              <li>Design and Analysis of Algorithms</li>
-              <li>Software Engineering</li>
-              <li>Systems Software</li>
-              <li>Game Theory</li>
-            </ul>
-          </div>
-        </div>
+        </p>
       </div>
-
-      <h2 class="generalTitle">Skills</h2>
-      <div class="container-fluid p-3 mb-5 bg-white rounded">
-        <div class="row shadow p-3">
-          <p>
-            <img src="resources/solidity.svg" class="icon">
-            <img src="resources/theGraph.png"" class="icon">
-            <img src="resources/reach.svg" class="icon">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" class="icon"/>
-            <img src="resources/cpp.png" class = "icon">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="icon"/>
-            <img src="resources/rescript.png" class="icon">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg" class="icon"/>
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" class="icon"/>
-            <img src="resources/hardhat.png" class="icon">
-            <img src="resources/foundry.png" class="icon">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg" class="icon"/>
-          </p>
-          <p class="italic">(Solidity, theGraph, Reach, C, C++, JavaScript, ReScript, Java, MySQL, Hardhat, Foundry, Git)</p>
-        </div>
-      </div>
-
-      <h2 class="generalTitle">Experience: Things I reported to a boss for</h2>
-
-      <!--ChainBytes--> 
-      <div class="container-fluid p-3 mb-5 bg-white rounded">
-        <div class="row shadow p-3">
-          <div class="col-lg-4 vertical">
-            <p class="role">Smart Contract Developer</p>
-            <p class="companyTitle"><a href="https://www.chainbytes.com/">ChainBytes</a></p>
-            <p class="date">January 2022 - December 2022</p>
-            <p>
-              <img src="resources/solidity.svg" class="icon">  
-              <img src="resources/theGraph.png"" class="icon">
-              <img src="resources/hardhat.png" class="icon">
-            </p>
-          </div>
-          <div class="col-md">
-            <ul class="noMargin">
-              <li>
-                <a href="https://github.com/JossDuff/ChainBytes">Repository</a>
-                - Check out the beautiful readme :)
-              </li>
-              <li>Undergradute capstone project mentored by Eric Grill, ChainBytes CEO and blockchain advisor to the President of El Salvador to verify fair
-                payment of wages to coffee laborers in El Salvador.</li>
-              <li>Designed, developed, tested, and deployed Solidity smart contract on an Ethereum Goerli testnet and a subgraph on theGraph network.</li>
-              <li>Maintained team’s Hardhat repo for smart contract and subgraph development.</li>
-              <li>WON best overall capstone project out of 30+ projects at Lehigh’s 2022 computer science capstone fair.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!--FLOAT-->  
-      <div class="container-fluid p-3 mb-5 bg-white rounded">
-        <div class="row shadow p-3">
-          <div class="col-lg-4 vertical">
-            <p class="role">Smart Contract Developer & Backend Developer Intern</p>
-            <p class="companyTitle"><a href="https://float.capital">Float Capital</a></p>
-            <p class="date">June 2022 - August 2022</p>
-            <p>
-              <img src="resources/solidity.svg" class="icon">  
-              <img src="resources/theGraph.png"" class="icon">
-              <img src="resources/foundry.png" class="icon">
-              <img src="resources/rescript.png" class="icon"> 
-            </p>
-          </div>
-          <div class="col-md">
-            <ul class="noMargin">
-              <li>Built a custom backend using GraphQL, Apollo, and ReScript to save emitted events and verify event data against data collected by subgraph.</li>
-              <li>Designed, wrote, and tested Solidity smart contract for Protocol Owned Liquidity dapp.</li>
-              <li>Developed and tested subgraph on theGraph network for Protocol Owned Liquidity smart contract.</li>
-              <li>Private repository that I no longer have access to.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!--NHI--> 
-      <!--
-      <div class="container-fluid p-3 mb-5 bg-white rounded">
-        <div class="row shadow p-3">
-          <div class="col-lg-4 vertical">
-            <p class="role">Software Engineer</p>
-            <p class="companyTitle"> <a href="https://nhi.lehigh.edu/">Nano Human Initiative</a>, Lehigh University</p>
-            <p class="date">January 2020 - September 2021</p>
-          </div>
-          <div class="col-md">
-            <ul class="noMargin">
-              <li>Small undergraduate team lead by Lehigh’s Dr. Brian Chen to create a graphic user interface for remote control and viewing of electron microscopes. </li>
-              <li>Team leader of four assigned with the task of implementing a custom Python library developed by the manufacturer of Lehigh’s electron microscope into our existing website.</li>
-              <li>Developed 30+ pages of documentation on state-of-the-art Python library to control electron microscopes.</li>
-              <li>Communicated and worked with team located across various time zones.</li>
-              <li>Paid internship over the summer (40 hours/week).  Non-paid internship during the academic year (10 hours/week).</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="container-fluid p-3 mb-5 bg-white rounded">
-        <div class="row shadow p-3">
-          <div class="col-lg-4 vertical">
-            <p class="role">Natural Language Processing Engineer</p>
-            <p class="companyTitle"> University of Iceland, Reykjavík Iceland</p>
-            <p class="date">October 2020 - November 2020</p>
-          </div>
-          <div class="col-md">
-            <ul class="noMargin">
-              <li>Learned about Natural Language Processing using PyTorch under Professor Hafsteinn Einarsson.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      -->
-
-
-      <h2 class="generalTitle">Projects: Things I worked on outside of class</h2>
-     
-      <!--SemiSwap--> 
-      <div class="container-fluid p-3 mb-5 bg-white rounded">
-        <div class="row shadow p-3">
-          <div class="col-lg-4 vertical">
-            <p class="role">Smart Contract Developer</p>
-            <p class="companyTitle">SemiSwap</p>
-            <p class="date">September 2022 - December 2022</p>
-            <p> 
-              <img src="resources/solidity.svg" class="icon">
-              <img src="resources/hardhat.png" class="icon">
-            </p>
-          </div>
-          <div class="col-md">
-            <ul class="noMargin">
-              <li>
-                <a href="https://github.com/JossDuff/cse242-fall2022-public/">Repository</a>
-              </li>
-              <li>
-                <a href="resources/assignment.pdf">Assignment hand out</a>
-              </li>
-              <li>Designed, wrote, and thoroughly tested an ERC-20 to Ether Automatic Market Maker DEX to be used as the reference solution for the
-                Blockchain Algorithms and Systems class I graded for.
-              </li>
-              <li>Wrote up an assignment description based on the reference solution I made to give my students a challenging but rewarding assignment.</li>
-              <li>This project is being used in future classes, so the solution .sol is private but I can show upon request.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!--algo crowdfund--> 
-      <div class="container-fluid p-3 mb-5 bg-white rounded">
-        <div class="row shadow p-3">
-          <div class="col-lg-4 vertical">
-            <p class="role">Decentralized App Developer</p>
-            <p class="companyTitle"><a href="https://www.algorand.com/">Algorand</a></p>
-            <p class="date">January 2022 - May 2022</p>
-            <p>
-              <img src="resources/reach.svg" class="icon">
-            </p>
-          </div>
-          <div class="col-md">
-            <ul class="noMargin">
-              <li>
-                <a href="https://github.com/JossDuff/reach-crowdfund">Repository</a>
-              </li>
-              <li>
-                <a href="https://developer.algorand.org/tutorials/crowdfunding-dapp-with-reach/">Published tutorial on official Algorand Developer Portal</a>
-              </li>
-              <li>Taught myself how to use the Reach blockchain development platform to create a decentralized crowdfunding 
-                application on the Algorand blockchain.</li>
-              <li>Learned about development on the Algorand blockchain with the Algorand community and docs.</li>
-              <li>Had weekly 1-on-1 meetings with Algorand developer advocate, Russ Fustino.</li>
-              <li>Claimed a gitcoin bounty sponsored by Reach for publishing a tutorial in their language.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!--Joss Token--> 
-      <div class="container-fluid p-3 mb-5 bg-white rounded shadow">
-        <div class="row p-3">
-          <div class="col-lg-4 vertical">
-            <p class="role">Smart Contract Developer</p>
-            <p class="companyTitle">JossToken</p>
-            <p class="date">September 2021</p>
-            <p>
-              <img src="resources/solidity.svg" class="icon">
-              <img src="resources/hardhat.png" class="icon">
-            </p>
-          </div>
-          <div class="col-md">
-            <ul class="noMargin">
-              <li>My first foray into smart contract development :)</li>
-              <li>Learned Solidity best practices to develop an ERC-20 token.</li>
-              <li>Deployed contract using Hardhat environment.</li>
-              <li><a href="https://rinkeby.etherscan.io/address/0x39D2bd02704B9E876e769Bf4C0964019623A5ee3#code">
-                Contract on Etherscan</a></li>
-            </ul>
-          </div>
-        </div>
-        <!--
-          <div class="row p-3">
-            <div class="col-lg-1 center">
-              <button onClick="connectWallet()">Connect Wallet</button>
-              <div id="wallet">wallet info</div>
-            </div>
-            <div class="col-lg-4 center">
-              <button onclick="freeJossButton()" id="jossButton">Free JossToken</button>
-            </div>
-            <div class="col-lg vertical">
-              <label for="name">Leave a message: (70 character limit)</label>
-              <input type="text" id="name" name="name" required minlength="1" maxlength="70" size="10">
-              <button onclick="myFunction()">Post message</button>
-              <button onClick="fetchMessage()">Fetch Message</button>
-            </div>
-          </div>
-        -->
-      </div>
-
-      <h2 class="generalTitle">Assignments: Things I worked on for a grade</h2>
-
-      <!--Operating Systems--> 
-      <div class="container-fluid p-3 mb-5 bg-white rounded">
-        <div class="row shadow p-3">
-          <div class="col-lg-4 vertical">
-            <p class="role">Software Engineer</p>
-            <p class="companyTitle">Class: Operating System Design</p>
-            <p class="date">September 2022 - December 2022</p>
-            <p>
-              <img src="resources/cpp.png" class = "icon">
-            </p>
-          </div>
-          <div class="col-md">
-            <ul class="noMargin">
-              <li>Created a client/server key value store.</li>
-              <li>Implemented RSA/AES encrypted communication between client and server.</li>
-              <li>Authenticated each connecting client with a username and password and enforced individual client data quotas.</li>
-              <li>Scaled the application to use multiple threads, safely.</li>
-              <li>Can share code upon request.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!--Database-->
-      <div class="container-fluid p-3 mb-5 bg-white rounded">
-        <div class="row shadow p-3">
-          <div class="col-lg-4 vertical">
-            <p class="role">Backend Developer</p>
-            <p class="companyTitle">Class: Database Systems and Applications</p>
-            <p class="date">September 2021 - December 2021</p>
-            <p>
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg" class="icon"/>
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" class="icon"/>  
-            </p>
-          </div>
-          <div class="col-md">
-            <ul class="noMargin">
-              <li><a href="https://github.com/JossDuff/cse241">Repository</a></li>
-              <li>Designed and created a database based on assignment description.</li>
-              <li>Created an API and a command line interface for interacting with the database.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!--Buzz--> 
-      <div class="container-fluid p-3 mb-5 bg-white rounded">
-        <div class="row shadow p-3">
-          <div class="col-lg-4 vertical">
-            <p class="role">Full Stack Developer</p>
-            <p class="companyTitle">Class: Software Engineering</p>
-            <p class="date">September 2021 - December 2021</p>
-            <p>
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg" class="icon"/>
-              <img src="resources/flutter.png" class="icon"/>
-            </p>
-          </div>
-          <div class="col-md">
-            <ul class="noMargin">
-              <li>Worked with small team to develop message board application for software engineering class.</li>
-              <li>Practiced agile development with two-week sprints and SCRUM management.</li>
-              <li>Worked on the back end with Maven and Heroku, Android front end with Flutter, and as project manager.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-    <!--jossduff.com-->
-    <!--
-      <div class="container-fluid p-3 mb-5 bg-white rounded">
-        <div class="row shadow p-3">
-          <div class="col-lg-4 vertical">
-            <p class="role">Web Developer</p>
-            <p class="companyTitle">jossduff.com</p>
-            <p class="date">January 2021</p>
-          </div>
-          <div class="col-md">
-            <ul class="noMargin">
-              <li>HTML, CSS, and Bootstrap.</li>
-              <li>Ethers.js library for interacting with smart contract.</li>
-              <li><a href="https://github.com/JossDuff/JossDuff.github.io">
-                Github repo</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    -->
-
-      <h2 class="generalTitle">Organizations</h2>
-
-      <!--SSS-->
-      <div class="container-fluid p-3 mb-5 bg-white rounded">
-        <div class="row shadow p-3">
-          <div class="col-lg-4 vertical">
-            <p class="role">Member, Researcher</p>
-            <p class="companyTitle"><a href="https://wordpress.lehigh.edu/sss/">Scalable Systems and Software 
-              Research Group</a>, Lehigh University</p>
-            <p class="date">January 2021 - Present</p>
-          </div>
-          <div class="col-md">
-            <ul class="noMargin">
-              <li>Attended weekly presentations advanced blockchain topics.</li>
-              <li>Shared and discussed blockchain technology news with professors and graduate students.</li>
-              <li>Researching the viability of implementing a hierarchical consensus mechanism for central bank digital currencies.</li>
-              <li>Reading and understanding published research papers in the database, distributed system, and parallel computing fields.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!--Grader-->
-      <div class="container-fluid p-3 mb-5 bg-white rounded">
-        <div class="row shadow p-3">
-          <div class="col-lg-4 vertical">
-            <p class="role">Grader, Course Designer, Lecturer</p>
-            <p class="companyTitle">Blockchain Algorithms and Systems</p>
-            <p class="date">August 2022 - December 2022</p>
-          </div>
-          <div class="col-md">
-            <ul class="noMargin">
-              <li>Designed, wrote, and tested class Solidity Automatic Market Maker project (see projects: SemiSwap).</li>
-              <li>Gave a lecture on comparison of EVM and AVM as well as smart contract languages Solidity, Vyper, Yul, Reach, PyTeal, and TEAL.</li>
-              <li>Graded assignments of 60+ students.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!--LCC-->
-      <div class="container-fluid p-3 mb-5 bg-white rounded">
-        <div class="row shadow p-3">
-          <div class="col-lg-4 vertical">
-            <p class="role">President</p>
-            <p class="companyTitle">Lehigh Cryptocurrency Club</p>
-            <p class="date">October 2021 - May 2022</p>
-          </div>
-          <div class="col-md">
-            <ul class="noMargin">
-              <li>Coordinated with Lehigh University to re-instate inactive club.</li>
-              <li>Led educational discussion with students about blockchain and cryptocurrency topics.</li>
-              <li>Organized and planned club meetings and events.</li>
-              <li>Recruited 100+ members.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
     </div>
+  </div>
+</body>
 
-    <!-- <div class="container-fluid center">
-      <button onclick="topFunction()">Take me to the top</button>
-    </div> -->
-  </body>
 </html>
